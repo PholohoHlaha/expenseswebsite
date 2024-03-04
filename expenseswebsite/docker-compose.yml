@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  django:
+    image: django-docker:0.0.1
+    build: .
+    ports:
+      - "8000:8000"
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    ports:
+      - '2181:2181'
+  
+  db:
+    container_name: postgresql_db
+    image: postgres
+    restart: always
+
+  
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+
+    ports:
+      - '5433:5432'
+  
+  pg-admin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@root.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - '5050:80'
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+   
