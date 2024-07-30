@@ -22,7 +22,7 @@ Step-by-Step Installation
 
 sh
 
-git clone https://github.com/your-username/expenseswebsite.git
+git clone https://github.com/PholohoHlaha/expenseswebsite.git
 cd expenseswebsite
 
 2. Set Up the Environment
@@ -99,7 +99,7 @@ Usage
 
 Future Enhancements
 
-    Additional Features: Plan to add more features to enhance the system.
+    Additional Features: Computer Vision enhancement
     Improved User Interface: Make the user interface more intuitive and user-friendly.
     Performance Optimization: Optimize the performance of the application.
 
@@ -108,4 +108,4 @@ License
 This project is licensed under the MIT License.
 Contact
 
-For any inquiries or questions, please contact Pholoho Hlaha.
+For any inquiries or questions, please contact pholohohlaha@gmail.com
